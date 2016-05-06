@@ -16,10 +16,6 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives', 
         templateUrl: 'partials/readPost',
         controller: 'ReadPostCtrl'
       }).
-      // when('/editPost/:id', {
-      //   templateUrl: 'partials/editPost',
-      //   controller: EditPostCtrl
-      // }).
       when('/editPost/:id',{
         templateUrl: 'partials/addPost',
         controller: 'AddPostCtrl'

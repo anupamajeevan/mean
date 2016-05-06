@@ -43,9 +43,7 @@ app.get('/partials/:name', routes.partials);
 // JSON API--internal API
 
 app.get('/api/posts', api.posts);
-
 app.get('/api/post/:id', api.post);
-//app.post('/api/post', api.addPost);
 app.post('/api/post/:id', api.addPost);
 app.put('/api/post/:id', api.editPost);
 app.delete('/api/post/:id', api.deletePost);

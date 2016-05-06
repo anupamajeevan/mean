@@ -9,7 +9,7 @@ var db = mongojs('surveys',['surveys']);
 
 exports.posts = function (req, res) {
   db.surveys.find(function (err,docs){
-    //  console.log(docs);
+      console.log(docs);
       res.json(docs);
     });
 };

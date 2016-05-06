@@ -11,12 +11,16 @@ $scope.surveys;
       dataFactory.getSurveys().then(function(response){
       data = response.data;
       $scope.surveys=data;
+      
       var l = surveyHelper.stat(data);
       var l1=[0,1];
       l1 = surveyHelper.stats(data);
+      //console.log(data);
       $scope.number=l;
       $scope.number1=l1[0];
       $scope.name=l1[2];
+
+
 
     }, function (error){
       $scope.status = "Error";
@@ -111,8 +115,10 @@ $scope.surveys;
 
 
  if (id == 0){
+
+    console.log($scope.form);
      dataFactory.insertSurvey(id,$scope.form).then(function(response){
-      console.log(response);
+      //console.log(response);
         $location.path('/');
       });
     alert("Saved!");
