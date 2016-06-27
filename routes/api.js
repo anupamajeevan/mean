@@ -9,7 +9,6 @@ var db = mongojs('surveys',['surveys']);
 
 exports.posts = function (req, res) {
   db.surveys.find(function (err,docs){
-      console.log(docs);
       res.json(docs);
     });
 };
@@ -34,7 +33,6 @@ exports.addPost = function (req, res) {
 
 exports.editPost = function (req, res) {
   var id = req.params.id;
-
   delete req.body._id;
   var upd = req.body;
   db.surveys.update({_id:mongojs.ObjectId(id)},upd,function(err,doc){
